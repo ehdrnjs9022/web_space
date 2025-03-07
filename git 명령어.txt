@@ -1,0 +1,27 @@
+$ git push --force origin main 강제푸시
+
+worksapce -> stage  = git add .
+stage -> local =git commit -m " "
+local -> repository = git push origin main
+
+
+git 처음할때
+1) git init  (현재 폴더에 저장소 생성)
+2) git add . (stage에 추가하겠다)
+3) git commit -m" " (local 저장소에 올린다)
+4) github 홈페이지에서 new repository 생성
+5) git remote add origin 주소(new repository)
+6) git push origin main
+
+Staging Area : 준비 영역, 중간 영역
+- 변경된 코드가 Local Repository에 저장하기 전
+머무르는 중간 영역.
+- Local Repository에 저장될 코드를 선택하고
+commit을 통해 저장할 수 있음.
+
+Local Repository : 내 PC 내에 있는 저장소
+- 소스 코드의 추가/변경 사항을 기록하는 저장소.
+- Local Repository에 저장된 내용은
+Remote Repository에 push를 반영할 수 있음.
+
+Remote Repository : 원격 저장소(GitHub)

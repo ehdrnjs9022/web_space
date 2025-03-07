@@ -11,8 +11,7 @@
  			border:1px dotted Lightpink;
  			margin:auto;
  			background-size:100%
- 			
- 			
+
 	}
 	button{
 		width : 150px;
@@ -29,24 +28,25 @@
 			background : rgba(120,35,35,0.2);
 		}
 	}	
-	
 </style>
 </head>
 <body>
- 	<h1></h1>
+ 	<h1>하하호호히히</h1>
  	<hr>
 	<Script>
-		console.log(location);
+		//console.log(location);
+		
+		// - 클라이언트 요청시 페이지 이동
+		// location 객체의
+		// href 속성에
+		// 요청 URL을
+		// 대입해준다.
+		function forwardRequestPage(){
+			location.href = 'http://127.0.0.1/bk/static/Request_Page.html';
+		
+		}
 	</Script> 	
- 	<button onclick="">주문하기</button>
- 	<hr>
- 	
- 	
- 	
- 	
- 	
- 	
- 	
+ 		<button onclick="forwardRequestPage();">주문하기</button>
  	
  	
 </body>
