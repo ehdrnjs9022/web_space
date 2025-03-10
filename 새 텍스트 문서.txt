@@ -1,0 +1,11 @@
+QueryString = K 값 : V 값  ( GET 방식) 가공해서 넘기기 귀찮으니
+getParameter 사용
+동적인응답 : Servlet(컨트롤러)
+- class extends Https savlet -> 컨트롤러 패키지생성 -> new servlet 생성
+
+request.getAttribute(" K 값");
+
+form은 input 요소에 사용자에게 값을 받을때
+
+- 절대경로 : /bm/sc
+- 상대경로 : sc
