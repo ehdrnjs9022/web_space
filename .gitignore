@@ -1,5 +1,3 @@
-
-
 Servers/
 
 ### Eclipse ###
@@ -14,4 +12,3 @@ local.properties
 .settings/
 .loadpath
 .recommenders
-

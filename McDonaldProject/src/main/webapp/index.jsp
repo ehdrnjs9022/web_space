@@ -30,13 +30,19 @@
 		상대 경로 방식 : sc	
 	 -->
 	
+	<p> herf="매핑값"</p>
 	
 	<a href="sc">a태그</a>
 	
+	<hr>
 	
+	<a href="include">포함 포함</a>
+	<hr>
+	<a href="forward">포워드 SP로 이동</a>
 	
+	<hr>
 	
-	
+	<a href="jstl">실과바늘 배우러가기</a>
 	
 	
 	

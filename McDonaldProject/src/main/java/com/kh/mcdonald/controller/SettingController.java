@@ -1,11 +1,14 @@
 package com.kh.mcdonald.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.kh.mcdonald.model.dto.Hamburger;
 
@@ -57,7 +60,21 @@ public class SettingController extends HttpServlet {
 		  request.setAttribute("brand", "KFC");
 		  request.setAttribute("bestSeller", new Hamburger("징거버거", 6200, "KFC"));
 		
+		  // sessionScope 홈캣기능이므로 new를 하지않아도 자동으로 객체 생성 역할 HttpSession()
+		  HttpSession session = request.getSession();
+		  session.setAttribute("brand", "Mcdonald");
+		  session.setAttribute("bestSeller", new Hamburger("빅맥",6500,"Mcdonnald"));
+		  
+		  //숫자
+		  request.setAttribute("big", 10);
+		  request.setAttribute("small", 3);
 		
+		  //문자  
+		  request.setAttribute("str", "좋아하는문구");
+		  
+		  //리스트
+		  request.setAttribute("list", new ArrayList());
+		  
 	   // 응답 뷰 위임 -> 포워딩
 		  request.getRequestDispatcher("/WEB-INF/views/print.jsp").forward(request, response);
 		
