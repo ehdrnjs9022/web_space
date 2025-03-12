@@ -25,3 +25,9 @@ Local Repository : 내 PC 내에 있는 저장소
 Remote Repository에 push를 반영할 수 있음.
 
 Remote Repository : 원격 저장소(GitHub)
+
+- 캐시삭제(  실수로 .gitignore에 넣어야할것을 push로 올렸을떄 삭제법)
+git rm -r --cached .
+git add . 
+git comit -m ""
+push~

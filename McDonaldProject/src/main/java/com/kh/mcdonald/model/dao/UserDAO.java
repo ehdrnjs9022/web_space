@@ -31,7 +31,7 @@ public class UserDAO {
 				,"KH25_JDK","KH1234")){
 		PreparedStatement pstmt = conn.prepareStatement(
 				"""
-				SELECT 
+				 SELECT 
 						USER_NO,
 						USER_ID,
 						USER_PW, 

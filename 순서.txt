@@ -25,7 +25,7 @@ toString() 메서드 생성	Alt + Shift + S → S	필드값을 문자열로 표�
     ↓
 5. DB에서 조회된 결과를 DTO에 담음
     ↓
-6. Controller가 그 결과를 JSP에 넘김
+6. Controller가 서블릿 requset에 값을 담아 그 결과를 JSP에 넘김
     ↓
 7. JSP에서 결과(화면)를 응답
 

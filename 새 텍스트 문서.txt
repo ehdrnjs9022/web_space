@@ -37,3 +37,17 @@ request.getSession() 이라는 코드는?
 RequestDispatcher (서블릿에서)로 jsp 와 연결할 객체를 생성
 -> forward로  객체와 jsp 를 연결!
 -> 연결하면 jsp 코드를 서블릿이 읽어냄
+
+- 서블릿으로 값이 왔을때
+
+1. 조회 실패 시 
+- "조회 결과 실패 알림"
+2. 조회 성공 시(인증성공 상태 로그인)
+- RequsetDispacth 는 담아서 보내면 값이 사라짐 ( 1회만 유지 일회용 ,사용불가)
+
+- Session  setAttribute 으로 저장해야함  ( 브라우저 세션동안 유지,사용)
+(브라우저 끄거나,서버끌경우)
+
+서블릿이 jsp에게 응답시키려고 하는게 forward 
+
+
