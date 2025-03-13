@@ -39,8 +39,8 @@ public class LoginController extends HttpServlet {
 		// 3) 값이 두 개 이상일 경우 어딘가에 담기
 		
 		MemberDTO member = new MemberDTO();
-		member.setMebmerId(memberId);
-		member.setMebmerPw(memberPw);
+		member.setMemberId(memberId);
+		member.setMemberPw(memberPw);
 		
 		// 서비스에 넘겨주려면 메모리에 올라가 있어야하기때문에 객체 생성 -> 여기서 넘겨줌
 		MemberDTO loginMember =new MemberService().login(member);
@@ -75,7 +75,6 @@ public class LoginController extends HttpServlet {
 		// Client가 다시 요청을 보내게 만드는 방법
 		String contextPath = request.getContextPath();
 		response.sendRedirect(contextPath);
-		
 		
 		
 		

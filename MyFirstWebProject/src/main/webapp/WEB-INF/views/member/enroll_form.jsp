@@ -22,7 +22,7 @@
 	<jsp:include page="../include/header.jsp" />
 	
 	<div style="width : 80%; margin : auto; padding : 50px;">
-		<form action="회원가입매핑값" name="signup" id="signUpForm" method="post"
+		<form action="sign-up" name="signup" id="signUpForm" method="post"
 						style="margin-bottom: 0;">
 			<table
 				style="cellpadding: 0; cellspacing: 0; margin: 0 auto; width: 100%">
@@ -32,7 +32,7 @@
 					</td>							
 				</tr>
 				<tr>
-					<td><input type="text" name="" id="user_id"
+					<td><input type="text" name="memberId" id="user_id"
 						class="form-control tooltipstered" maxlength="14"
 						required="required" aria-required="true"
 						style="margin-bottom: 25px; width: 100%; height: 40px; border: 1px solid #d9d9de"
@@ -47,7 +47,7 @@
 				</tr>
 				<tr>
 					<td><input type="password" size="17" maxlength="20" id="password"
-						name="" class="form-control tooltipstered" 
+						name="memberPw" class="form-control tooltipstered" 
 						maxlength="20" required="required" aria-required="true"
 						style="ime-mode: inactive; margin-bottom: 25px; height: 40px; border: 1px solid #d9d9de"
 						placeholder="영문과 특수문자를 포함한 최소 8자"></td>
@@ -59,7 +59,7 @@
 				</tr>
 				<tr>
 					<td><input type="password" size="17" maxlength="20" id="password_check"
-						name="pw_check" class="form-control tooltipstered" 
+						name="memberPw" class="form-control tooltipstered" 
 						maxlength="20" required="required" aria-required="true"
 						style="ime-mode: inactive; margin-bottom: 25px; height: 40px; border: 1px solid #d9d9de"
 						placeholder="비밀번호가 일치해야합니다."></td>
@@ -71,7 +71,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="text" name="" id="user_name"
+					<td><input type="text" name="memberName" id="user_name"
 						class="form-control tooltipstered" maxlength="6"
 						required="required" aria-required="true"
 						style="margin-bottom: 25px; width: 100%; height: 40px; border: 1px solid #d9d9de"
@@ -84,7 +84,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="email" name="" id="user_email"
+					<td><input type="email" name="email" id="user_email"
 						class="form-control tooltipstered" 
 						required="required" aria-required="true"
 						style="margin-bottom: 25px; width: 100%; height: 40px; border: 1px solid #d9d9de"

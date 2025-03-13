@@ -4,28 +4,40 @@ import java.sql.Date;
 
 public class MemberDTO {
 
-	private String mebmerId;
-	private String mebmerPw;
-	private String mebmerName;
+	private String memberId;
+	private String memberPw;
+	private String memberName;
 	private String email;
 	private Date endollDate;
-	public String getMebmerId() {
-		return mebmerId;
+	public MemberDTO() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
-	public void setMebmerId(String mebmerId) {
-		this.mebmerId = mebmerId;
+	public MemberDTO(String memberId, String memberPw, String memberName, String email, Date endollDate) {
+		super();
+		this.memberId = memberId;
+		this.memberPw = memberPw;
+		this.memberName = memberName;
+		this.email = email;
+		this.endollDate = endollDate;
 	}
-	public String getMebmerPw() {
-		return mebmerPw;
+	public String getMemberId() {
+		return memberId;
 	}
-	public void setMebmerPw(String mebmerPw) {
-		this.mebmerPw = mebmerPw;
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
 	}
-	public String getMebmerName() {
-		return mebmerName;
+	public String getMemberPw() {
+		return memberPw;
 	}
-	public void setMebmerName(String mebmerName) {
-		this.mebmerName = mebmerName;
+	public void setMemberPw(String memberPw) {
+		this.memberPw = memberPw;
+	}
+	public String getMemberName() {
+		return memberName;
+	}
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
 	}
 	public String getEmail() {
 		return email;
@@ -39,36 +51,12 @@ public class MemberDTO {
 	public void setEndollDate(Date endollDate) {
 		this.endollDate = endollDate;
 	}
-	public MemberDTO(String mebmerId, String mebmerPw, String mebmerName, String email, Date endollDate) {
-		super();
-		this.mebmerId = mebmerId;
-		this.mebmerPw = mebmerPw;
-		this.mebmerName = mebmerName;
-		this.email = email;
-		this.endollDate = endollDate;
-	}
-	public MemberDTO() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	@Override
 	public String toString() {
-		return "MemberDTO [mebmerId=" + mebmerId + ", mebmerPw=" + mebmerPw + ", mebmerName=" + mebmerName + ", email="
+		return "MemberDTO [memberId=" + memberId + ", memberPw=" + memberPw + ", memberName=" + memberName + ", email="
 				+ email + ", endollDate=" + endollDate + "]";
 	}
 	
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

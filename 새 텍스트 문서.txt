@@ -49,5 +49,6 @@ RequestDispatcher (서블릿에서)로 jsp 와 연결할 객체를 생성
 (브라우저 끄거나,서버끌경우)
 
 서블릿이 jsp에게 응답시키려고 하는게 forward 
+인스턴스: heap 메모리에 올라간 객체
 
 

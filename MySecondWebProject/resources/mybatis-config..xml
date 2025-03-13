@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!--
+		environments  : MyBatis를 이용해서 우리가 연동할 DBMS의 정보를 등록하는 태그
+     -->
+	<environments default="development">
+		<environment id="development">
+			<!--  
+				*transactionManager : 트랜잭션관련해서 어떻게 작업을 처리할 것인지			
+				- JDBC    : 트랙잭션을 개발자가 직접관리하겠다. (수동 commit)
+				- MANAGED : 개발자가 트랜잭션에 대해 어떤 영향도 끼치지않겠다. (자동 commit)
+			-->
+			
+			<transactionManager type="JDBC"/>
+			
+			<!-- 
+				* dataSource의 type속성은 POOLED랑 UNPOOLED 중 하나 선택해서 작성
+				Connection Pool : Connection 객체를 담아둘 수 있는 영역, 미리만들어서
+				한번 생성된 Connection을 재사용
+				
+				POOLED => 나 쓸거임
+				UNPOOLED => 안 쓸거임
+				
+				보편적으로는 사용함
+			 -->
+			<dataSource type="">
+				<property name="driver" value="orcale.jdbc.driver.OracleDriver"/>
+				<property name="url" value="jdbc:oracle:thin:@112.221.156.34:12345:xe"/>
+				<property name="username" value="KH25_JDK"/>
+				<property name="pssword" value="KH1234"/>
+			</dataSource>
+		</environment>
+	</environments>
+</configuration>
+  

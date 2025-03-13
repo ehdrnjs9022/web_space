@@ -27,7 +27,26 @@ public class MemberService {
 		
 			MemberDTO loginMember = new MemberDAO().login(member);	
 				return loginMember;
+	}
+
+
+	public int signUp(MemberDTO member) {
+
+		int result = new MemberDAO().checkId(member.getMemberId());
+								// 아이디중복검사 memberId 다넘길필요없으니 memberId값만넘김 
+		
+		if(result > 0) {
+			return result;
+		}
+		
+	new MemberDAO().signUp(member);
+	
+	return result;
 	
 	
 	}
+
+	
+
+
 }
