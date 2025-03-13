@@ -184,9 +184,52 @@ public class MemberDAO {
 		}
 		
 	}
-
-
-
+	
+	public int modify(MemberDTO member) {
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		String sql = """
+					    UPDATE KH_MEMBER SET  
+					    MEMBER_NAME = ? , EMAIL = ? 
+					   	WHERE MEMBER_ID = ? 
+					    
+				""";
+		
+		int result =0;
+		try {
+			
+			conn =	DriverManager.getConnection("jdbc:oracle:thin:@112.221.156.34:12345"
+					,"KH25_JDK","KH1234");
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, member.getMemberName());	
+			pstmt.setString(2, member.getEmail());	
+			pstmt.setString(3, member.getMemberId());	
+				
+			pstmt.executeUpdate();	
+				
+				
+		}catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			
+		}try {
+			if(pstmt != null) pstmt.close();
+			if(conn != null) conn.close();
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+		
 
 
 }
+
+	
+	

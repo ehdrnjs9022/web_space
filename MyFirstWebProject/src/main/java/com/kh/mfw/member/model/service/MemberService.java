@@ -46,6 +46,21 @@ public class MemberService {
 	
 	}
 
+	public int modify(MemberDTO member) {
+		
+		int result = new MemberDAO().modify(member);
+		
+		if(result > 0) {
+			// 조건에 맞아서 수정됨	
+		}else {
+			
+		}
+		
+		return result;
+	}
+	
+	
+	
 	
 
 

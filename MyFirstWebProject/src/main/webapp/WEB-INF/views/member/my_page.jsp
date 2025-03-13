@@ -22,7 +22,7 @@
 	<jsp:include page="../include/header.jsp" />
 	
 	<div style="width : 80%; margin : auto; padding : 50px;">
-		<form action="수정매핑" name="signup" id="signUpForm" method="post"
+		<form action="modify" name="signup" id="signUpForm" method="post"
 						style="margin-bottom: 0;">
 			<table
 				style="cellpadding: 0; cellspacing: 0; margin: 0 auto; width: 100%">
@@ -47,7 +47,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="text" name="" id="user_name"
+					<td><input type="text" name="memberName" id="user_name"
 						class="form-control tooltipstered" maxlength="6"
 						required="required" aria-required="true"
 						style="margin-bottom: 25px; width: 100%; height: 40px; border: 1px solid #d9d9de"
@@ -60,7 +60,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td><input type="email" name="" id="user_email"
+					<td><input type="email" name="email" id="user_email"
 						class="form-control tooltipstered" 
 						required="required" aria-required="true"
 						style="margin-bottom: 25px; width: 100%; height: 40px; border: 1px solid #d9d9de"
