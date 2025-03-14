@@ -72,6 +72,15 @@
 </head>
 
 <body id="page-top">
+	
+	
+		<c:if test="${ not empty sessionScope.message}">
+			<script>
+				alert('${sessionScope.message}');
+			</script>
+			<c:remove var ="message" scope="session"/>
+		</c:if>
+
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -143,7 +152,7 @@
 			<!-- Modal body -->
 			<div class="modal-body">
 
-				<form action="/mfw/sign-in" name="sign-in" method="post" id="signInForm"
+				<form action="sign-in" name="sign-in" method="post" id="signInForm"
 					style="margin-bottom: 0;">
 					<table style="cellpadding: 0; cellspacing: 0; margin: 0 auto; width: 100%">
 						<tr>

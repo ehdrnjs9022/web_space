@@ -53,3 +53,6 @@ RequestDispatcher (서블릿에서)로 jsp 와 연결할 객체를 생성
 
 git pull 오류  <welcome-file>index.jsp</welcome-file> web.xml에추가
 
+Full Class Name : 패키지부터 클래스 식별자까지
+( com.kh.mfw.member.model.dto.MEMBER_DTO )
+

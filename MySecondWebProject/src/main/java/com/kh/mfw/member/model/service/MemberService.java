@@ -4,6 +4,8 @@ import org.apache.ibatis.session.SqlSession;
 
 
 import static com.kh.mfw.common.Template.getSqlSession;
+
+import com.kh.mfw.member.model.dao.MemberDAO;
 import com.kh.mfw.member.model.dto.MemberDTO;
 
 public class MemberService {
@@ -19,10 +21,32 @@ public class MemberService {
 		
 		SqlSession sqlSession = getSqlSession();
 		
+		// 유혀성 검증 => 패스(원래 해야됨)
 		
-		return null;
+		MemberDTO loginMember = new MemberDAO().login(sqlSession, member);
+		
+		sqlSession.close();
+		
+		return loginMember;
 	}
 	
-
+	public int signUp(MemberDTO member) {
+		
+		SqlSession sqlSession = getSqlSession();
+		
+		//boolean result 	= new MemberDAO().checkId(sqlSession, member.getMemberId());
+		
+		if(new MemberDAO().checkId(sqlSession, member.getMemberId())) {
+			sqlSession.close();
+			return 0;
+		}
+		
+		int result = new MemberDAO().signUp(sqlSession,member);
+			
+		sqlSession.commit();
+		
+		sqlSession.close();
+		return result;
+	}
 
 }

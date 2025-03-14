@@ -1,8 +1,3 @@
-서블릿,jsp 있다고 가정하고
-
-DTO 클래스를 만든다. 옮길값들을 적는다
-DTO 객체를 이용해 DAO 작성
-
 
 폴더 구조	설명
 src/main/java	자바 소스 파일 작성 위치
@@ -15,16 +10,26 @@ Getter/Setter 생성	Alt + Shift + S → R	원하는 필드 선택 후 자동 �
 toString() 메서드 생성	Alt + Shift + S → S	필드값을 문자열로 표현하는 메서드
 
 - 실행 흐름
-1. 클라이언트(브라우저)가 요청 (ex. /user/list)
+1. 클라이언트가 (ex. /user/list)
     ↓
-2. 서블릿(Controller) → 요청 받음
+ View
+   ↓
+ Request URL Mapping 값을 담당 Servlet에게 전달( 톰캣 역할)
+   ↓
+2. 서블릿(Controller) → 요청 받음,처리(중간다리), 데이터 가공
     ↓
-3. Service → 비즈니스 로직 처리
+3. Service → 비즈니스 로직 처리(의사 결정 코드) , 유효성 검사(DB갈필요없는것들)
     ↓
-4. DAO → DB에 접근 (SQL 실행)
+4. DAO → DB에 접근 (SQL 실행, 결과받기)
+  
+- DAO까지(자바임) RAM에저장(비영구적) 그래서 DB(영구적)에 저장 둘이연결하는게 JDBC
+- 톰캣이 전체 서버역할
+ ↓
+5. DB(오라클 자바아님)에서 조회된 결과를 DTO에 담음
     ↓
-5. DB에서 조회된 결과를 DTO에 담음
-    ↓
+
+- HTML,CSS,JS는 JAVA와 관련이없기 때문에 jsp 로 연결 
+
 6. Controller가 서블릿 requset에 값을 담아 그 결과를 JSP에 넘김
     ↓
 7. JSP에서 결과(화면)를 응답
@@ -39,4 +44,5 @@ DTO -> 꺼내쓸떄
  dto 값이 있을떄 get으로 불러서사용 (둘다가능)
 set은 XXX.set 했을떄 XXX 객체에 값을 저장하겠다,dto에 저장하겠따
 
+클라이어
 

@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.kh.mfw.member.model.dto.MemberDTO;
 import com.kh.mfw.member.model.service.MemberService;
@@ -30,7 +31,8 @@ public class ModifyController extends HttpServlet {
 		member.setMemberName(memberName);
 		member.setEmail(email);
 		
-		 new MemberService().modify(member);
+		int result = new MemberService().modify(member);
+		
 		
 		
 		

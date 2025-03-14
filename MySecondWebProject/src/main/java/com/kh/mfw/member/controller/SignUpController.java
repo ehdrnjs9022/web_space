@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.kh.mfw.member.model.dto.MemberDTO;
 import com.kh.mfw.member.model.service.MemberService;
@@ -56,8 +57,20 @@ public class SignUpController extends HttpServlet {
 //		}
 	
 		// 중복방지로 삼항연산자
-			response.sendRedirect(result != 0 ? path + "/join" : path);
-
+			
+		// "중복된 아이디가 존재합니다. 다른아이디를 입력해주세요" -> jsp로 값보내야함
+		//request.setAttribute("message", "중복된 아이디가 존재합니다. 다른아이디를 입력해주세요.");
+		// 지금 케이스에서는 못보냄
+		//String msg = "중복된 아이디가 존재합니다. 다른아이디를 입력해주세요.";
+		//System.out.println(msg);
+		
+		if(result == 0) {
+			request.getSession()
+			.setAttribute("message", "중복된 아이디가 존재합니다. 다른아이디를 입력해주세요.");
+		} 
+		
+		response.sendRedirect(result != 0 ? path + "/join" : path);
+			
 		
 		/*
 		 * MemberDTO member = new MemberDTO(); member.setMebmerId(memberId);
