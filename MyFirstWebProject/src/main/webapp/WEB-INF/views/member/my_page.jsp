@@ -159,11 +159,11 @@
 	
 	
 	      <div class="modal-body">
-	        <form action="비밀번호 수정 매핑값" method="post">
+	        <form action="modifyPw" method="post">
 	        
 			  <div class="form-group">
 			    <label for="userPwd">현재 비밀번호 :</label>
-			    <input type="password" name="userPwd" class="form-control" placeholder="비밀번호를 입력해주세요." id="userPwd" required>
+			    <input type="password" name="memberPw" class="form-control" placeholder="비밀번호를 입력해주세요." id="userPwd" required>
 			  </div>
 			  
 			  <div class="form-group">
@@ -177,6 +177,22 @@
 			  </div>
 			  
 			  <button type="submit" class="btn btn-secondary" onclick="return validatePwd();">비밀번호 변경</button>
+			  
+			  
+			  <c:if test="${not empty sessionScope.message1}">	
+			  	 <script>
+			  		alert('${ sessionScope.message1 }');
+			  	</script>
+			  	<c:remove var="message1" scope="session"/>
+			  </c:if>
+			  
+			  <c:if test="${not empty sessionScope.message2}">
+			  	 <script>
+			  		alert('${ sessionScope.message2 }');
+			  	</script>
+			  	<c:remove var="message2" scope="session"/>
+			  </c:if>
+			  
 			  
 			  <script>
 			  	function validatePwd(){

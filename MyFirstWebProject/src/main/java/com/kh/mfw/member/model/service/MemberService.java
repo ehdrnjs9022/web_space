@@ -59,6 +59,29 @@ public class MemberService {
 		return result;
 	}
 	
+	public int modifyPw(String pw, String changePwd) {
+		
+		int result = new MemberDAO().modifyPw(pw,changePwd);
+		
+		if(result > 0) {
+			
+		}else {
+			// 변경실패
+		}
+		
+		return result;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

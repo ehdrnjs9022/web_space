@@ -56,8 +56,17 @@ public class MemberDTO {
 		return "MemberDTO [memberId=" + memberId + ", memberPw=" + memberPw + ", memberName=" + memberName + ", email="
 				+ email + ", endollDate=" + endollDate + "]";
 	}
+
+
 	
 
 
+	
+	
+	
+	
+	
+	
+	
 
 }

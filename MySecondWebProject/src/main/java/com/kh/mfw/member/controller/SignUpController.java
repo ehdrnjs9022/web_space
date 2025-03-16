@@ -35,7 +35,7 @@ public class SignUpController extends HttpServlet {
 		// 안될때가있음
 		MemberDTO member = new MemberDTO(memberId,memberPw,memberName,email,null);
 		
-		int result = new MemberService().signUp(member);
+		int result =new MemberService().signUp(member);
 		
 
 		String path = request.getContextPath();

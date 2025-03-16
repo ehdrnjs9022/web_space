@@ -56,3 +56,42 @@ git pull 오류  <welcome-file>index.jsp</welcome-file> web.xml에추가
 Full Class Name : 패키지부터 클래스 식별자까지
 ( com.kh.mfw.member.model.dto.MEMBER_DTO )
 
+response.sendRedirect 답장할게.브라우저야 다른페이지로가!
+request.getContextPath(index.sjp)	요청할게 어디냐면 index.sjp
+삼항연산자(조건 ? 값1 : 값2 )
+조건 ? 참일 때 값 : 거짓일 때 값;
+
+- request : 클라이언트(사용자)의 요청 값을 꺼내받음
+
+1. getParameter : 사용자가 form에 입력한 값 가져오기
+2. getSession    : 세션 객체 얻기 (값 오래 저장할 때) /
+			세션은 "보내는 기능"을 별도로 하는 건 아니고,
+			JSP에서 값을 꺼내서 쓸 수 있기 때문에 결과적으로 
+			'전달'처럼 보이는 거예요.	
+			
+3. setAttribute  :  값을 rquest에 담아서 JSP로 보내는 역할 (K ,V) ( 보내는건아님)
+			보내는건 Dispatch foward
+4. getContextPath : 
+	- request.getContextPath() → 주소를 구하는 애
+	response.sendRedirect() → 그 주소로 이동시키는 애
+
+- response 서버가 클라이언트에게 응답 (답장)
+
+1. sendRedirect : 브라우저에게 다른 주소로 다시 요청하라고 짓 ( 다른 페이지로 다시가!)
+2. setContentType : 응답(답장)하는 문서 타입을 알려줌 (HTML, JSON, XML 등)
+ 				( 이 응답은 HTML 문서야~” 하고 브라우저에게 알려주는 것 )
+
+1.HttpSession session = request.getSession();
+session.setAttribute("result", result);
+2,request.getSession().setAttribute("result", result);
+현재 사용자 세션을 꺼내거나 새로 만듦 (1,2동일)
+
+
+
+
+
+
+
+
+
+

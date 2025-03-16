@@ -19,6 +19,8 @@ public class MemberDAO {
 		}
 		
 	}
+
+	private Object PreparedStatement;
 	
 	public MemberDTO login(MemberDTO member) {
 		
@@ -211,7 +213,7 @@ public class MemberDAO {
 			pstmt.executeUpdate();	
 				
 				
-		}catch (Exception e) {
+		}catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			
@@ -226,10 +228,46 @@ public class MemberDAO {
 		return result;
 	}
 	
+	public int modifyPw(String pw, String changePwd) {
 		
-
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		
+		
+		String sql = """
+					UPDATE KH_MEMBER SET 
+					MEMBER_PW = ?
+					WHERE 
+					MEMBER_PW = ? 
+				""";
+		int result = 0;
+		try {
+				conn=DriverManager.getConnection("jdbc:oracle:thin:@112.221.156.34:12345:xe",
+												"KH25_JDK","KH_1234");
+			
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, changePwd);
+				pstmt.setString(2, pw);
+				
+				pstmt.executeUpdate();
+				
+		}catch (SQLException e) {
+			e.printStackTrace();
+		
+		
+		} finally {
+		
+		} try {
+			if(pstmt != null) pstmt.close();
+			if(conn != null) conn.close();
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+		
 
 }
 
-	
-	
