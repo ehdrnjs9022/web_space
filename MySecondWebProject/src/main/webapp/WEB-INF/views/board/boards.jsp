@@ -75,10 +75,9 @@ tr:hover{
          </div>
       </div>
       <script>
-      	const goto(no) => {
+      	const goto = (no) => {
 			//console.log(e);      		
-      		location.href = 'board?boardNo=\${no}';
-      		
+      		location.href = `board?boardNo=\${no}`;
       	
       	}
       
@@ -117,7 +116,7 @@ tr:hover{
    			SET
    			COUNT = COUNT +1
    		WHERE
-   			BOARD_NO = #{boardNo }	
+   			BOARD_NO = ${boardNo }	
    		
    </update>
      

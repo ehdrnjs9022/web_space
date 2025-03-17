@@ -40,7 +40,7 @@
 		
 		          <div class="form-group">
 		            <label>내용</label>
-		            <textarea class="form-control" rows="5" name='content' readonly style="resize:none;">원본 게시글 내용</textarea>
+		            <textarea class="form-control" rows="5" name='content' readonly style="resize:none;">${board.boardContent }</textarea>
 		          </div>
 		
 		          <div class="form-group">

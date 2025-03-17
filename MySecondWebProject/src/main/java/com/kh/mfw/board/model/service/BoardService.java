@@ -158,9 +158,8 @@ public class BoardService {
 		}
 	
 		sqlSession.commit();	
-	
-	}
 		return board;
+	}
 	
 	
 	

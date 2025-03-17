@@ -1,4 +1,4 @@
-package com.kh.mfw.member.controller;
+package com.kh.mfw.board.model.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -38,6 +38,9 @@ public class BoardDetailViewController extends HttpServlet {
 			.forward(request, response);
 			
 			
+		} else {
+			session.setAttribute("message", "존재하지 않는 게시글입니다.");
+			response.sendRedirect(request.getContextPath());
 		}
 	
 		request.setAttribute("board", board);
