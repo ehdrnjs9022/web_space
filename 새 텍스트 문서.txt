@@ -88,9 +88,21 @@ session.setAttribute("result", result);
 
 
 
+✅ GET 방식
+주소창에 데이터가 보임 (쿼리스트링으로 전송)
+http://example.com/search?name=홍길동&age=20
+가볍고 빠름
+데이터 노출됨 → 보안에 취약
+URL 길이 제한 있음
+주로 조회용 (검색, 목록조회 등)
+🟢 예시
 
-
-
+✅ POST 방식
+주소창에 데이터 안 보임 (본문 body에 전송)
+보안이 GET보다 좋음
+많은 양의 데이터 전송 가능
+주로 데이터 등록, 수정, 로그인 등
+🟢 예시
 
 
 
